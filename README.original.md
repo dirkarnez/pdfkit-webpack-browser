@@ -1,4 +1,5 @@
-# pdfkit-webpack-example
+pdfkit-webpack-browser
+======================
 
 Simple example of using PdfKit with webpack
 
