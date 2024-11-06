@@ -36,11 +36,11 @@ jobs:
         with:
           type: 'zip'
           directory: "dist"
-          filename: "${{ github.event.repository.name }}-${{ github.ref_name }}-${{ matrix.node-version }}.zip"
+          filename: "${{ github.event.repository.name }}-${{ github.ref_name }}-node-${{ matrix.node-version }}.zip"
           
       - name: Release prebuilt
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "dist/${{ github.event.repository.name }}-${{ github.ref_name }}-${{ matrix.node-version }}.zip"
+          artifacts: "dist/${{ github.event.repository.name }}-${{ github.ref_name }}-node-${{ matrix.node-version }}.zip"
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
